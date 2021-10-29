@@ -1,8 +1,9 @@
 import React from "react"
 import { View } from "react-native"
+import { supabase } from "../initSupabase"
 import { MainStackParamList } from "../types/navigation"
 import { StackScreenProps } from "@react-navigation/stack"
-import { Layout, Text } from "react-native-rapi-ui"
+import { Layout, Text, Button } from "react-native-rapi-ui"
 
 export default function ({
   navigation,
@@ -16,7 +17,26 @@ export default function ({
           justifyContent: "center",
         }}
       >
-        <Text>This is the Profile tab</Text>
+    
+            <Text fontWeight="bold" style={{ textAlign: "center" }}>
+            </Text>
+            
+            <Button
+              status="danger"
+              text="Logout"
+              onPress={async () => {
+                const { error } = await supabase.auth.signOut()
+                if (!error) {
+                  alert("Signed out!")
+                }
+                if (error) {
+                  alert(error.message)
+                }
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
       </View>
     </Layout>
   )

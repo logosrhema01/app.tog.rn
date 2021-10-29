@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.0",
+    "@freakycoder/react-native-helpers": "^1.0.2",
+    "@react-native-async-storage/async-storage": "~1.15.0",
     "@react-native-community/masked-view": "0.1.10",
+    "@react-native-seoul/masonry-list": "^1.1.1",
     "@react-navigation/bottom-tabs": "^5.11.11",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.5",
@@ -21,13 +24,18 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+    "react-native-androw": "^0.0.34",
+    "react-native-dynamic-vector-icons": "^1.1.6",
     "react-native-gesture-handler": "~1.10.2",
+    "react-native-header-search-bar": "^0.1.10",
+    "react-native-material-ripple": "^0.9.1",
     "react-native-rapi-ui": "^0.2.1",
     "react-native-reanimated": "~2.2.0",
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.4.0",
+    "react-native-vector-icons": "^9.0.0",
     "react-native-web": "~0.13.12",
-    "@react-native-async-storage/async-storage": "~1.15.0"
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",

@@ -1,27 +1,75 @@
-import React from "react"
-import { View, Linking } from "react-native"
+import React, { FC, ReactElement, useContext, useMemo, useState } from "react"
+import { View, Image, SafeAreaView } from "react-native"
 import { MainStackParamList } from "../types/navigation"
 import { StackScreenProps } from "@react-navigation/stack"
 import { supabase } from "../initSupabase"
+import { data } from './utils/mock'
 import {
   Layout,
   Button,
   Text,
-  TopNav,
   Section,
+  TopNav,
   SectionContent,
   useTheme,
   themeColor,
 } from "react-native-rapi-ui"
-import { Ionicons } from "@expo/vector-icons"
+import { HeaderClassicSearchBar } from "react-native-header-search-bar"
+import MasonryList from '@react-native-seoul/masonry-list';
+import { AuthContext } from "../provider/AuthProvider"
+
+
+
+const Card = ({item}) => {
+  const randomBool = useMemo(() => Math.random() < 0.5, []);
+  console.log(item)
+  return (
+    <View key={item.id} style={{marginTop: 12, flex: 1}}>
+      <Image
+        source={{uri: item.imgURL}}
+        style={{
+          height: randomBool ? 150 : 280,
+          alignSelf: 'stretch',
+        }}
+        resizeMode="cover"
+      />
+      <Text
+        style={{
+          marginTop: 8,
+        }}>
+        {item.text}
+      </Text>
+    </View>
+  );
+};
 
 export default function ({
   navigation,
 }: StackScreenProps<MainStackParamList, "MainTabs">) {
+  const [searchText, setSearchText] = useState("")
+  const auth = useContext(AuthContext)
   const { isDarkmode, setTheme } = useTheme()
+
+  const renderItem = ({
+    item,
+  }: {
+    item: any;
+    index?: number;
+  }): ReactElement => {
+    return <Card item={item} />;
+  };
+  const backgroundStyle = {
+    backgroundColor: isDarkmode ? themeColor.dark : themeColor.white,
+    flex: 1,
+  };
+
+  const handleSearchInput = (text: string) => {
+    setSearchText(text)
+  }
   return (
     <Layout>
-      <TopNav
+      {/* <TopNav
+        height={40}
         middleContent="Home"
         rightContent={
           <Ionicons
@@ -37,53 +85,26 @@ export default function ({
             setTheme("dark")
           }
         }}
-      />
-      <View
+      /> */}
+      <HeaderClassicSearchBar 
+        backgroundColor={isDarkmode ? themeColor.dark100 : themeColor.white200} 
         style={{
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
+          margin: 0,
         }}
-      >
-        <Section style={{ marginTop: 20 }}>
-          <SectionContent>
-            <Text fontWeight="bold" style={{ textAlign: "center" }}>
-              These UI components provided by Rapi UI
-            </Text>
-            <Button
-              style={{ marginTop: 10 }}
-              text="Rapi UI Documentation"
-              status="info"
-              onPress={() => Linking.openURL("https://rapi-ui.kikiding.space/")}
-            />
-            <Button
-              text="Go to second screen"
-              onPress={() => {
-                navigation.navigate("SecondScreen")
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-            <Button
-              status="danger"
-              text="Logout"
-              onPress={async () => {
-                const { error } = await supabase.auth.signOut()
-                if (!error) {
-                  alert("Signed out!")
-                }
-                if (error) {
-                  alert(error.message)
-                }
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-          </SectionContent>
-        </Section>
-      </View>
+        onChangeText={handleSearchInput}
+        value={searchText} />
+      
+      <SafeAreaView style={backgroundStyle}>
+      <MasonryList
+        contentContainerStyle={{
+          paddingHorizontal: 24,
+          alignSelf: 'stretch',
+        }}
+        numColumns={2}
+        data={data}
+        renderItem={renderItem}
+      />
+    </SafeAreaView>
     </Layout>
   )
 }
