@@ -15,11 +15,11 @@ export default function Header(props: { headerName: string}){
         height={50}
         middleContent={props.headerName}
         rightContent={
-          <Ionicons
-            name={isDarkmode ? "sunny" : "moon"}
-            size={20}
-            color={isDarkmode ? themeColor.white100 : themeColor.dark}
-          />
+            <TouchableOpacity
+                onPress={() => alert('Press me')}
+            >
+                <Ionicons name='ios-cart' size={24} color='#101010' />
+            </TouchableOpacity>
         }
         rightAction={() => {
           if (isDarkmode) {

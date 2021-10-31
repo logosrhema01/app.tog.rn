@@ -17,29 +17,27 @@ const data = [
   {
     uri: 'https://i.imgur.com/GImvG4q.jpg',
     title: 'Lorem ipsum dolor sit amet',
-    content:
-      'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+    discount: '50%'
   },
   {
     uri: 'https://i.imgur.com/Pz2WYAc.jpg',
     title: 'Lorem ipsum ',
-    content: 'Neque porro quisquam est qui dolorem ipsum ',
+    discount: '20%'
   },
   {
     uri: 'https://i.imgur.com/IGRuEAa.jpg',
     title: 'Lorem ipsum dolor',
-    content:
-      'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+    discount: '10%'
   },
   {
     uri: 'https://i.imgur.com/fRGHItn.jpg',
     title: 'Lorem ipsum dolor',
-    content: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet',
+    discount: '15%'
   },
   {
     uri: 'https://i.imgur.com/WmenvXr.jpg',
     title: 'Lorem ipsum ',
-    content: 'Neque porro quisquam est qui dolorem ipsum quia dolor ',
+    discount: '60%'
   },
 ];
 
@@ -55,7 +53,7 @@ export default function (props: any) {
 
   function renderItem({item, index}): JSX.Element {
 
-    const {uri, title, content} = item;
+    const {uri, title, discount} = item;
     return (
       <TouchableOpacity
         activeOpacity={1}
@@ -65,12 +63,14 @@ export default function (props: any) {
         }}>
         <ImageBackground source={{uri: uri}} style={styles.imageBackground}>
           <View style={styles.rightTextContainer}>
-            <Text style={styles.rightText}>Lorem</Text>
+            <Text style={styles.rightText}>{discount}</Text>
+          </View>
+          <View style={styles.bottomTextContainer}>
+            <Text style={styles.bottomText}>{title}</Text>
           </View>
         </ImageBackground>
         <View style={styles.lowerContainer}>
           <Text style={styles.titleText}>{title}</Text>
-          <Text style={styles.contentText}>{content}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   rightTextContainer: {
     marginLeft: 'auto',
     marginRight: -2,
-    backgroundColor: 'rgba(49, 49, 51,0.5)',
+    backgroundColor: themeColor.dangerTransparent,
     padding: 3,
     marginTop: 3,
     borderTopLeftRadius: 5,
@@ -131,6 +131,18 @@ const styles = StyleSheet.create({
   lowerContainer: {
     flex: 1,
     margin: 10,
+  },
+  bottomTextContainer:{
+    marginLeft: -2,
+    marginRight: 'auto',
+    paddingLeft: 10,
+    paddingTop:100,
+    marginBottom: 3,
+    textAlignVertical: "center"
+  },
+  bottomText: {
+    fontWeight: 'bold',
+    fontSize: 15
   },
   titleText: {
     fontWeight: 'bold',

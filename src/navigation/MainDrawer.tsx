@@ -1,24 +1,27 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-import Home from '../screens/Home';
-import About from '../screens/About';
-import Profile from '../screens/Profile';
-import Header from '../components/Header';
+import { themeColor } from 'react-native-rapi-ui';
+import { Header } from '../components'
+import { Home, About, Profile } from '../screens'
+import TogDrawer from '../components/TogDrawer';
+import { Dimensions } from 'react-native';
 
 
 const Drawer = createDrawerNavigator();
 
 export default function App() {
+  const {width} = Dimensions.get('window');
   return (
     <Drawer.Navigator 
-      drawerType="front"
       initialRouteName="Home"
       drawerContentOptions={{
-        activeTintColor: '#e91e63',
+        activeTintColor: themeColor.primaryTransparent,
         itemStyle: { marginVertical: 10 },
       }}
-     
+      drawerStyle={{
+        width: width-70
+      }}
+      drawerContent={props => <TogDrawer {...props} drawerWidth={width-70}/>}
     >
         <Drawer.Screen 
           name="Home"
@@ -46,20 +49,20 @@ export default function App() {
             }
           }}
       />
-      <Drawer.Screen 
-          name="Profile"
-          component={Profile}
-          options={{
-            headerShown:true,
-            header: () => {
-              
-            
-              return (
-                <Header headerName="Profile"/>
-              );
-            }
-          }}
-      />
+        <Drawer.Screen 
+            name="Profile"
+            component={Profile}
+            options={{
+                headerShown:true,
+                header: () => {
+                
+                
+                return (
+                    <Header headerName="Profile"/>
+                );
+                }
+            }}
+          />
     </Drawer.Navigator>
-  );
+  )
 }
