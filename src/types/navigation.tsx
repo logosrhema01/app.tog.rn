@@ -3,6 +3,7 @@ export type MainStackParamList = {
 	MainDrawer: undefined;
 	Home: undefined;
 	SecondScreen: undefined;
+	Cart: undefined;
 };
 
 export type AuthStackParamList = {

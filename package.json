@@ -12,6 +12,7 @@
     "@freakycoder/react-native-helpers": "^1.0.2",
     "@react-native-async-storage/async-storage": "~1.15.0",
     "@react-native-community/masked-view": "0.1.10",
+    "@react-native-picker/picker": "1.16.1",
     "@react-native-seoul/masonry-list": "^1.1.1",
     "@react-navigation/bottom-tabs": "^5.11.11",
     "@react-navigation/drawer": "^5.x",
@@ -31,12 +32,15 @@
     "react-native-gesture-handler": "~1.10.2",
     "react-native-header-search-bar": "^0.1.10",
     "react-native-material-ripple": "^0.9.1",
+    "react-native-picker-select": "^8.0.4",
     "react-native-rapi-ui": "^0.2.1",
     "react-native-reanimated": "~2.2.0",
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.4.0",
     "react-native-vector-icons": "^9.0.0",
     "react-native-web": "~0.13.12",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
     "tslib": "^2.3.1"
   },
   "devDependencies": {

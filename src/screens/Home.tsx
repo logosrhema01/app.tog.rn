@@ -1,5 +1,5 @@
 import React, { FC, ReactElement, useContext, useMemo, useState } from "react"
-import { View, Image, SafeAreaView, ScrollView, StyleSheet, TouchableOpacity, ImageBackground } from "react-native"
+import { View, Image, SafeAreaView, ScrollView, StyleSheet, TouchableOpacity, ImageBackground, Modal, Pressable, Dimensions } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
 import { MainStackParamList } from "../types/navigation"
 import { supabase } from "../initSupabase"
@@ -17,16 +17,52 @@ import {
 } from "react-native-rapi-ui"
 import MasonryList from '@react-native-seoul/masonry-list';
 import { AuthContext } from "../provider/AuthProvider"
-import { Entypo, Ionicons } from "@expo/vector-icons"
-import moveToBottom from "../components/utils/MoveToBottom"
-import { TouchableHighlight } from "react-native-gesture-handler"
+import { Ionicons } from "@expo/vector-icons"
+import { useAppDispatch } from "../hooks"
+import { ADD_TO_CART } from "../redux/CartItems"
+import ProductDetails from "../components/utils/ProductDetails"
 
 
 
-const Card = ({item}: {item: { id: string, imgURL: string, text: string, price: number, discount: number}}) => {
+const Card = ({item}: {
+  item: { 
+    id: string, 
+    imgURL: string, 
+    text: string, 
+    price: number, 
+    discount: number,
+    colors: string[],
+    sizes: string[],
+    reviews: any[],
+    promo_message: string
+  }}) => {
   const randomBool = useMemo(() => Math.random() < 0.5, []);
+  const dispatch = useAppDispatch()
+  const [modalVisible, setModalVisible] = useState(false);
+  const addItemToCart = (item: any) => dispatch({ type: ADD_TO_CART, payload: item })
+  
   return (
     <View key={item.id} style={styles.cardContainer}>
+      <View style={styles.centeredView}>
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            setModalVisible(!modalVisible);
+          }}
+        >
+          <ScrollView contentContainerStyle={styles.centeredView}>
+            
+            <View style={styles.modalView}>
+            <View style={[styles.rightContainer]}>
+           <Ionicons name="ios-close" color="red" size={24} onPress={()=>setModalVisible(!modalVisible)}/> 
+          </View>
+              <ProductDetails item={item}/>
+            </View>
+          </ScrollView>
+        </Modal>
+      </View>
       <ImageBackground source={{uri: item.imgURL}} style={[styles.imageBackground, {
           height: randomBool ? 150 : 280,
         }]}>
@@ -34,7 +70,7 @@ const Card = ({item}: {item: { id: string, imgURL: string, text: string, price: 
            <Ionicons name="ios-heart-outline" color="red" size={24} onPress={()=>console.log('saved')}/> 
           </View>
           <View style={[styles.leftContainer]}>
-           <Ionicons name="ios-add-circle" color="red" size={30} onPress={()=>console.log('added')}/> 
+           <Ionicons name="ios-add-circle" color="red" size={30} onPress={() => setModalVisible(true)}/> 
           </View>
         </ImageBackground>
       <Text
@@ -127,6 +163,13 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: 'white',
   },
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 10,
+    marginHorizontal: 10
+  },
   circle: {
     width: 80,
     height: 80,
@@ -141,6 +184,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#EBEBEB',
     borderWidth: 5,
     borderColor: 'white',
+  },
+  modalView: {
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 25,
+    paddingTop: 0,
+    width: Dimensions.get('screen').width -20,
+    maxHeight: Dimensions.get('screen').height -40,
+    overflow: 'hidden',
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5
   },
   rightContainer: {
     marginLeft: 'auto',

@@ -1,7 +1,7 @@
 import React from "react"
 import { createStackNavigator } from "@react-navigation/stack"
 
-import SecondScreen from "../screens/SecondScreen"
+import Cart from "../screens/Cart"
 import Home from "../screens/Home"
 import MainDrawer from "./MainDrawer"
 import Search from "../screens/Search"
@@ -20,7 +20,7 @@ const Main = () => {
       <MainStack.Screen 
         name="Search"
         component={Search} />
-      <MainStack.Screen name="SecondScreen" component={SecondScreen} />
+      <MainStack.Screen name="Cart" component={Cart} />
 
     </MainStack.Navigator>
   )

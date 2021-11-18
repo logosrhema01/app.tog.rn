@@ -5,7 +5,25 @@ export const data: any[] = [
         'https://ii1.pepperfry.com/media/catalog/product/m/o/568x625/modern-chaise-lounger-in-grey-colour-by-dreamzz-furniture-modern-chaise-lounger-in-grey-colour-by-dr-tmnirx.jpg',
       text: 'Pioneer LHS Chaise Lounger in Grey Colour',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id124',
@@ -13,7 +31,25 @@ export const data: any[] = [
         'https://www.precedent-furniture.com/sites/precedent-furniture.com/files/styles/header_slideshow/public/3360_SL%20CR.jpg?itok=3Ltk6red',
       text: 'Precedant Furniture',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id125',
@@ -21,7 +57,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/leverette-fabric-queen-upholstered-platform-bed-1594829293.jpg',
       text: 'Leverette Upholstered Platform Bed',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id126',
@@ -29,7 +83,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/briget-side-table-1582143245.jpg?crop=1.00xw:0.770xh;0,0.129xh&resize=768:*',
       text: 'Briget Accent Table',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id127',
@@ -37,7 +109,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rivet-emerly-media-console-1610578756.jpg?crop=1xw:1xh;center,top&resize=768:*',
       text: 'Rivet Emerly Media Console',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id128',
@@ -45,7 +135,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/drew-barrymore-flower-home-petal-chair-1594829759.jpeg?crop=1xw:1xh;center,top&resize=768:*',
       text: 'Drew Barrymore Flower Home Accent Chair',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id129',
@@ -53,7 +161,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/goodee-ecobirdy-charlie-chairs-1594834221.jpg?crop=1xw:1xh;center,top&resize=768:*',
       text: 'Ecobirdy Charlie Chair',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id130',
@@ -61,7 +187,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hailey-sofa-1571430947.jpg?crop=0.481xw:0.722xh;0.252xw,0.173xh&resize=768:*',
       text: 'Hailey Sofa',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id131',
@@ -69,7 +213,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/archer-home-designs-dining-table-1594830125.jpg?crop=0.657xw:1.00xh;0.0986xw,0&resize=768:*',
       text: 'Farmhouse Dining Table',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id132',
@@ -77,7 +239,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/evelyn-coffee-table-1610578857.jpeg?crop=1xw:1xh;center,top&resize=768:*',
       text: 'Evelyn Coffee Table',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id133',
@@ -85,7 +265,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/burrow-nomad-sofa-1594837995.jpg?crop=1xw:1xh;center,top&resize=768:*',
       text: 'Slope Nomad Leather Sofa',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id134',
@@ -93,7 +291,25 @@ export const data: any[] = [
         'https://apicms.thestar.com.my/uploads/images/2020/02/21/570850.jpg',
       text: 'Chair and Table',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id223',
@@ -101,7 +317,25 @@ export const data: any[] = [
         'https://ii1.pepperfry.com/media/catalog/product/m/o/568x625/modern-chaise-lounger-in-grey-colour-by-dreamzz-furniture-modern-chaise-lounger-in-grey-colour-by-dr-tmnirx.jpg',
       text: 'Pioneer LHS Chaise Lounger in Grey Colour',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id224',
@@ -109,7 +343,25 @@ export const data: any[] = [
         'https://www.precedent-furniture.com/sites/precedent-furniture.com/files/styles/header_slideshow/public/3360_SL%20CR.jpg?itok=3Ltk6red',
       text: 'Precedant Furniture',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id225',
@@ -117,7 +369,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/leverette-fabric-queen-upholstered-platform-bed-1594829293.jpg',
       text: 'Leverette Upholstered Platform Bed',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id226',
@@ -125,7 +395,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/briget-side-table-1582143245.jpg?crop=1.00xw:0.770xh;0,0.129xh&resize=768:*',
       text: 'Briget Accent Table',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id227',
@@ -133,7 +421,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rivet-emerly-media-console-1610578756.jpg?crop=1xw:1xh;center,top&resize=768:*',
       text: 'Rivet Emerly Media Console',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id228',
@@ -141,7 +447,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/drew-barrymore-flower-home-petal-chair-1594829759.jpeg?crop=1xw:1xh;center,top&resize=768:*',
       text: 'Drew Barrymore Flower Home Accent Chair',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id229',
@@ -149,7 +473,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/goodee-ecobirdy-charlie-chairs-1594834221.jpg?crop=1xw:1xh;center,top&resize=768:*',
       text: 'Ecobirdy Charlie Chair',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id230',
@@ -157,7 +499,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hailey-sofa-1571430947.jpg?crop=0.481xw:0.722xh;0.252xw,0.173xh&resize=768:*',
       text: 'Hailey Sofa',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id231',
@@ -165,7 +525,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/archer-home-designs-dining-table-1594830125.jpg?crop=0.657xw:1.00xh;0.0986xw,0&resize=768:*',
       text: 'Farmhouse Dining Table',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id232',
@@ -173,7 +551,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/evelyn-coffee-table-1610578857.jpeg?crop=1xw:1xh;center,top&resize=768:*',
       text: 'Evelyn Coffee Table',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id233',
@@ -181,7 +577,25 @@ export const data: any[] = [
         'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/burrow-nomad-sofa-1594837995.jpg?crop=1xw:1xh;center,top&resize=768:*',
       text: 'Slope Nomad Leather Sofa',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
     {
       id: 'id234',
@@ -189,6 +603,24 @@ export const data: any[] = [
         'https://apicms.thestar.com.my/uploads/images/2020/02/21/570850.jpg',
       text: 'Chair and Table',
       price: 100,
-      discount: 50
+      discount: 50,
+      colors: ['red', 'blue', 'black', 'white'],
+      sizes: [ 'sm', 'md', 'l', 'xl'],
+      reviews: [
+          {
+            id: 1,
+            name: 'Mushud Atta-Mensah',
+            message: 'This Product is very great',
+            rate: 5
+          },
+          {
+            id: 2,
+            name: 'Mark Atta-Mensah',
+            message: 'This Product is very bad',
+            rate: 2
+          }
+        ],
+      promo_message: 'This is very comfortable'
+      
     },
   ];
